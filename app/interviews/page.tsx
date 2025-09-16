@@ -1,8 +1,9 @@
+"use client";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Briefcase, Calendar, Clock, MapPin, User, Video, MessageSquare, CheckCircle, XCircle, Hourglass, Plus } from 'lucide-react'
+import { Briefcase, Calendar, Clock, MapPin, User, Video, MessageSquare, CheckCircle, XCircle, Hourglass, Plus, Eye } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Separator } from "@/components/ui/separator"
 

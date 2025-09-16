@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Briefcase, Users, ClipboardList, Calendar, DollarSign, MapPin, Clock, CheckCircle, XCircle, Hourglass, MessageSquare, Eye, Menu, X, Plus, ArrowRight, TrendingUp, BarChart, Star, FileText, Mail, Phone, Linkedin, Github, Globe, Edit, Trash2 } from 'lucide-react'
+import { Briefcase, Users, ClipboardList, Calendar, DollarSign, MapPin, Clock, CheckCircle, XCircle, Hourglass, MessageSquare, Eye, Menu, X, Plus, ArrowRight, TrendingUp, BarChart, Star, FileText, Mail, Phone, Linkedin, Github, Globe, Edit, Trash2, Search } from 'lucide-react'
 import Image from "next/image"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
