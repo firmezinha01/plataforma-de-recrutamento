@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TalentHub - Conectando Talentos às Oportunidades Certas",
+  title: "gowid HR Tech - Conectando Talentos às Oportunidades Certas",
   description: "Plataforma de recrutamento e seleção para encontrar o emprego dos seus sonhos ou o talento ideal para sua equipe.",
     generator: 'v0.dev'
 }

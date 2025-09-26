@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -5,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Briefcase, MapPin, DollarSign, Clock, Filter, Search, ChevronRight } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function JobsPage() {
   const jobs = [
@@ -65,13 +67,31 @@ export default function JobsPage() {
     },
   ]
 
+//   const [searchTerm, setSearchTerm] = useState("")
+
+// const filteredJobs = jobs.filter(job =>
+//   job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//   job.company.toLowerCase().includes(searchTerm.toLowerCase())
+// )
+const [searchTerm, setSearchTerm] = useState("")
+
+const filteredJobs = jobs.filter(job =>
+  job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  job.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  job.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  job.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
+)
+
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       {/* Header */}
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b">
         <Link href="#" className="flex items-center justify-center">
-          <Briefcase className="h-6 w-6 text-primary" />
-          <span className="sr-only">TalentHub</span>
+          {/* <Briefcase className="h-6 w-6 text-primary" /> */}
+            <img src="/logo.png" alt="Logo da empresa" className="w-18 h-12 rounded"/>
+
+          <span className="sr-only">gowid HR Tech</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link href="/jobs" className="text-sm font-medium hover:underline underline-offset-4">
@@ -101,7 +121,9 @@ export default function JobsPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <h1 className="text-3xl font-bold">Vagas de Emprego</h1>
             <div className="flex w-full max-w-md items-center space-x-2">
-              <Input type="search" placeholder="Buscar vagas..." className="flex-1" />
+              {/* <Input type="search" placeholder="Buscar vagas..." className="flex-1" /> */}
+              {/* <Input type="search" placeholder="Buscar vagas..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-1"/> */}
+              <Input type="search" placeholder="Buscar por título, empresa, localização ou habilidade..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-1"/>
               <Button type="submit">
                 <Search className="h-4 w-4" />
                 <span className="sr-only">Buscar</span>
@@ -114,7 +136,7 @@ export default function JobsPage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {jobs.map((job) => (
+            {filteredJobs.map((job) => (
               <Card key={job.id} className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <Image
@@ -164,7 +186,7 @@ export default function JobsPage() {
       <footer className="bg-card text-card-foreground py-8 mt-8">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">TalentHub</h3>
+            <h3 className="text-lg font-bold mb-4">gowid HR Tech</h3>
             <p className="text-sm text-muted-foreground">Conectando talentos às oportunidades certas.</p>
           </div>
           <div>
@@ -234,7 +256,7 @@ export default function JobsPage() {
           </div>
         </div>
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground mt-8 border-t pt-8">
-          © {new Date().getFullYear()} TalentHub. Todos os direitos reservados.
+          © {new Date().getFullYear()} gowid HR Tech. Todos os direitos reservados.
         </div>
       </footer>
     </div>

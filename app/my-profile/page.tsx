@@ -60,8 +60,10 @@ export default function MyProfilePage() {
       {/* Header */}
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b">
         <Link href="#" className="flex items-center justify-center">
-          <Briefcase className="h-6 w-6 text-primary" />
-          <span className="sr-only">TalentHub</span>
+          {/* <Briefcase className="h-6 w-6 text-primary" /> */}
+            <img src="/logo.png" alt="Logo da empresa" className="w-18 h-12 rounded"/>
+
+          <span className="sr-only">gowid HR Tech</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link href="/jobs" className="text-sm font-medium hover:underline underline-offset-4">
@@ -277,7 +279,7 @@ export default function MyProfilePage() {
           </div>
         </div>
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground mt-8 border-t pt-8">
-          © {new Date().getFullYear()} TalentHub. Todos os direitos reservados.
+          © {new Date().getFullYear()} gowid HR Tech. Todos os direitos reservados.
         </div>
       </footer>
     </div>

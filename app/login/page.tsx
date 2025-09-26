@@ -12,8 +12,10 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <Link href="/" className="flex items-center justify-center space-x-2 mb-4">
-            <Briefcase className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">TalentHub</span>
+            {/* <Briefcase className="h-8 w-8 text-primary" /> */}
+            <img src="/logo.png" alt="Logo da empresa" className="w-18 h-12 rounded"/>
+
+            {/* <span className="text-2xl font-bold">gowid HR Tech</span> */}
           </Link>
           <CardTitle className="text-2xl">Entrar</CardTitle>
           <CardDescription>

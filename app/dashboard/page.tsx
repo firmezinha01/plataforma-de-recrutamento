@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Briefcase, Users, ClipboardList, Calendar, DollarSign, MapPin, Clock, CheckCircle, XCircle, Hourglass, MessageSquare, Eye, Menu, X, Plus, ArrowRight, TrendingUp, BarChart, Star, FileText, Mail, Phone, Linkedin, Github, Globe, Edit, Trash2,Search } from 'lucide-react'
+import { Briefcase, Users, ClipboardList, Calendar, DollarSign, MapPin, Clock, CheckCircle, XCircle, Hourglass, MessageSquare, Eye, Menu, X, Plus, ArrowRight, TrendingUp, BarChart, Star, FileText, Mail, Phone, Linkedin, Github, Globe, Edit, Trash2, Search } from 'lucide-react'
 import Image from "next/image"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -77,8 +77,10 @@ export default function CandidateDashboardPage() {
       <header className="border-b bg-background">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Briefcase className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">TalentHub</span>
+            {/* <Briefcase className="h-6 w-6 text-primary" /> */}
+            <img src="/logo.png" alt="Logo da empresa" className="w-18 h-12 rounded"/>
+
+            <span className="text-xl font-bold">gowid HR Tech</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/dashboard/candidate" className="text-foreground font-medium">
@@ -272,7 +274,7 @@ export default function CandidateDashboardPage() {
       <footer className="bg-card text-card-foreground py-8 mt-8">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">TalentHub</h3>
+            <h3 className="text-lg font-bold mb-4">gowid HR Tech</h3>
             <p className="text-sm text-muted-foreground">
               Conectando talentos às oportunidades certas.
             </p>
@@ -304,7 +306,7 @@ export default function CandidateDashboardPage() {
           </div>
         </div>
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground mt-8 border-t pt-8">
-          © {new Date().getFullYear()} TalentHub. Todos os direitos reservados.
+          © {new Date().getFullYear()} gowid HR Tech. Todos os direitos reservados.
         </div>
       </footer>
     </div>

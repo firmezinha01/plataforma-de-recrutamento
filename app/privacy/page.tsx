@@ -12,8 +12,10 @@ export default function PrivacyPage() {
       {/* Header */}
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b">
         <Link href="#" className="flex items-center justify-center">
-          <Briefcase className="h-6 w-6 text-primary" />
-          <span className="sr-only">TalentHub</span>
+          {/* <Briefcase className="h-6 w-6 text-primary" /> */}
+            <img src="/logo.png" alt="Logo da empresa" className="w-18 h-12 rounded"/>
+
+          <span className="sr-only">gowid HR Tech</span>
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link href="/jobs" className="text-sm font-medium hover:underline underline-offset-4">
@@ -78,7 +80,7 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">1. Introdução</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Bem-vindo(a) à TalentHub. Valorizamos a sua privacidade e estamos comprometidos em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos e compartilhamos suas informações quando você utiliza nossa plataforma de recrutamento e seleção.
+              Bem-vindo(a) à gowid HR Tech. Valorizamos a sua privacidade e estamos comprometidos em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos e compartilhamos suas informações quando você utiliza nossa plataforma de recrutamento e seleção.
             </p>
           </section>
 
@@ -167,7 +169,7 @@ export default function PrivacyPage() {
               Se tiver dúvidas sobre esta Política de Privacidade, entre em contato conosco:
             </p>
             <p className="text-muted-foreground leading-relaxed mt-2">
-              Email: suporte@talenthub.com
+              Email: suporte@gowidhrtech.com
             </p>
           </section>
         </div>
@@ -177,7 +179,7 @@ export default function PrivacyPage() {
       <footer className="bg-card text-card-foreground py-8 mt-8">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">TalentHub</h3>
+            <h3 className="text-lg font-bold mb-4">gowid HR Tech</h3>
             <p className="text-sm text-muted-foreground">
               Conectando talentos às oportunidades certas.
             </p>
@@ -209,7 +211,7 @@ export default function PrivacyPage() {
           </div>
         </div>
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground mt-8 border-t pt-8">
-          © {new Date().getFullYear()} TalentHub. Todos os direitos reservados.
+          © {new Date().getFullYear()} gowid HR Tech. Todos os direitos reservados.
         </div>
       </footer>
     </div>
